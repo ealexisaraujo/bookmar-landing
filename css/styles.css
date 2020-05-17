@@ -151,6 +151,7 @@
 }
 .tabs-content {
   display: none;
+  flex-direction: column;
 }
 .tabs-content img {
   max-width: 100%;
