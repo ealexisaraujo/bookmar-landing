@@ -1,15 +1,15 @@
 .menu
   visibility: hidden
-  display: none
   position absolute
-  top: 100%
+  opacity 0
   left: 0
   right 0
+  top: 100%
   background: rgba(47,53,79, .9)
   height 100vh
   transform: translateY(-50px)
-  transition: .3s transform .3s opacity
-  will-change: transform
+  transition .3s transform, .3s opacity
+  will-change transform
   ul
     padding: 0
     list-style none
@@ -17,10 +17,10 @@
     border-top 1px solid var(--grayishBlue)
     &:last-child
       a
-        border 2px solid white
+        border: 2px solid white;
         border-radius: 5px
-        margin-top .1em
-        padding: .7em
+        margin-top 1em
+        padding .7em
   a
     color: white
     text-decoration: none
@@ -30,7 +30,6 @@
     padding: 1em
     letter-spacing: 2px
   &-open
-    
     user-select: none
     width: 40px
     height 40px
@@ -45,9 +44,8 @@
         .menu-open
           background-image: url('../images/icon-close.svg')
         & .header-logo
-          background-image: url('../images/logo-bookmark-white.svg') 
+          background-image: url('../images/logo-bookmark-white.svg')
         & .menu
-          display: block
           transform: translateY(0)
           visibility: visible
           opacity 1

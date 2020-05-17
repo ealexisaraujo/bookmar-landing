@@ -1,14 +1,14 @@
 .menu {
   visibility: hidden;
-  display: none;
   position: absolute;
-  top: 100%;
+  opacity: 0;
   left: 0;
   right: 0;
+  top: 100%;
   background: rgba(47,53,79,0.9);
   height: 100vh;
   transform: translateY(-50px);
-  transition: 0.3s transform 0.3s opacity;
+  transition: 0.3s transform, 0.3s opacity;
   will-change: transform;
 }
 .menu ul {
@@ -21,7 +21,7 @@
 .menu li:last-child a {
   border: 2px solid #fff;
   border-radius: 5px;
-  margin-top: 0.1em;
+  margin-top: 1em;
   padding: 0.7em;
 }
 .menu a {
@@ -54,7 +54,6 @@
   background-image: url("../images/logo-bookmark-white.svg");
 }
 .menu-checkbox:checked ~ .header .menu {
-  display: block;
   transform: translateY(0);
   visibility: visible;
   opacity: 1;
@@ -66,7 +65,7 @@
   left: 0;
   right: 0;
   padding: 1.5em 0;
-  transition: 0.3 background;
+  transition: 0.3s background;
 }
 .header-logo {
   display: inline-flex;
