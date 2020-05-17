@@ -58,6 +58,37 @@
   visibility: visible;
   opacity: 1;
 }
+@media screen and (min-width: 1024px) {
+  .menu {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+    position: initial;
+    height: auto;
+    background: initial;
+  }
+  .menu a {
+    color: var(--veryDarkBlue);
+  }
+  .menu li {
+    border: none;
+  }
+  .menu li:last-child a {
+    border: none;
+    border-radius: 0.5em;
+    margin-top: 0;
+    padding: 0.7em 2em;
+    background: var(--softRed);
+    color: #fff;
+    margin-left: 2em;
+  }
+  .menu ul {
+    display: flex;
+  }
+  .menu-open {
+    display: none;
+  }
+}
 .header {
   background: #fff;
   position: sticky;
