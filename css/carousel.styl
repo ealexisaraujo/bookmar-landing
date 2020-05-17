@@ -1,0 +1,17 @@
+.carousel
+  &-content
+    &[open]
+      .carousel
+        &-header
+          border none
+          &::-webkit-details-marker
+           color var(--softRed)
+  &-header
+    padding: 1.5em 0
+    border-bottom: 1px solid var(--ligthGray)
+    font-style .9em
+    &:focus
+      outline: 0
+    &::-webkit-details-marker
+      color var(--softBlue)
+      float right
