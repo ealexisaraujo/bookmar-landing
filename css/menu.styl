@@ -1,0 +1,14 @@
+.menu
+  border: 1px solid blue
+  margin: 10px
+  display: none
+  &-checkbox
+    margin: 2em
+    &:checked
+      & ~ .menu-open
+        border: 1px solid blue
+      & ~ .menu
+        border: 1px solid red
+        display: block
+  &-open
+    border: 1px solid red
