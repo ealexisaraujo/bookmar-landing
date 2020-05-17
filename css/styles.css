@@ -90,14 +90,62 @@
   padding-top: 1em;
 }
 .tabs {
-  border: 1px solid #f00;
+  margin-top: 2em;
+  border-top: 1px solid var(--grayishBlue);
 }
 .tabs-link {
-  padding: 1em 0;
   border-bottom: 1px solid var(--grayishBlue);
+}
+.tabs-content {
+  display: none;
+}
+.tabs-content img {
+  max-width: 100%;
+  margin-bottom: 1.5em;
+}
+.tabs-grid {
+  margin-top: 4em;
+}
+.tabs label {
+  padding: 1em 0;
+  display: block;
+  position: relative;
+}
+.tabs label:after {
+  display: none;
+  content: "";
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  left: 0;
+  transform: translateX(50%);
+  box-shadow: inset 0 -15px 0 -10px #f00;
+}
+.tabs input {
+  display: none;
+}
+.tabs input[id="bookmarking"]:checked ~ ul [for="bookmarking"]:after {
+  display: block;
+}
+.tabs input[id="bookmarking"]:checked ~ .tabs-grid #tab-bookmarking {
+  display: block;
+}
+.tabs input[id="searching"]:checked ~ ul [for="searching"]:after {
+  display: block;
+}
+.tabs input[id="searching"]:checked ~ .tabs-grid #tab-searching {
+  display: block;
+}
+.tabs input[id="sharing"]:checked ~ ul [for="sharing"]:after {
+  display: block;
+}
+.tabs input[id="sharing"]:checked ~ .tabs-grid #tab-sharing {
+  display: block;
 }
 .features {
   text-align: center;
+  padding: 3em 0;
 }
 :root {
   --softBlue: #5368df;
@@ -114,6 +162,7 @@ body {
 ul {
   padding: 0;
   list-style: none;
+  margin: 0;
 }
 .is-hidden {
   display: none !important;
@@ -126,7 +175,10 @@ ul {
 .u-h1,
 .u-h2 {
   font-size: 2em;
-  font-weight: 400;
+  font-weight: 500;
+}
+.u-h2 {
+  font-size: 1.5em;
 }
 .u-p {
   color: var(--grayishBlue);
@@ -151,7 +203,4 @@ ul {
 .u-button.is-gray {
   color: var(--veryDarkBlue);
   background: #f7f7f7;
-}
-.u-tabs {
-  border: 1px solid #f00;
 }
